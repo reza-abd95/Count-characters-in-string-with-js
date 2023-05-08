@@ -10,13 +10,20 @@ const data =Object.values(sentence.reduce((prev, cur) => {
   return prev;
 
   }, {}))
-  return data;
+  
+  let newData= data.reduce(function(prev, cur) {
+    return Object.assign(prev, cur);
+  }, {});
+
+  return newData;
 }
 
 
-let mySentence = ('Hi my name is Reza ABD').split("");
+let mySentence = ('Hi my name is Reza ABD').replaceAll(" " , "").split("");
 
-console.log(numberOfLetters(mySentence))
+console.log(numberOfLetters(mySentence)) 
+
+
 
 
 
