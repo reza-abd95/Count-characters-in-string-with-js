@@ -9,11 +9,11 @@ const data =Object.values(sentence.reduce((prev, cur) => {
   } 
   return prev;
 
-  }, {}))
+}, {}))
   
-  let newData= data.reduce(function(prev, cur) {
-    return Object.assign(prev, cur);
-  }, {});
+let newData= data.reduce(function(prev, cur) {
+  return Object.assign(prev, cur);
+}, {});
 
   return newData;
 }
