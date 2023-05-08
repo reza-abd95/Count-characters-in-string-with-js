@@ -1,22 +1,22 @@
 function numberOfLetters(sentence){
 
-const data =  sentence.reduce((prev, cur) => {
-
+const data =Object.values(sentence.reduce((prev, cur) => {
   if(!prev[cur]){
-    prev[cur] = {letter: cur , number: 1};
+    prev[cur] = {[cur]: 1};
   } 
   else{
-    prev[cur].number = prev[cur].number+1;
+    prev[cur][cur]++;
   } 
   return prev;
 
-}, {})
+  }, {}))
   return data;
 }
 
 
 let mySentence = ('Hi my name is Reza ABD').split("");
-console.log(numberOfLetters(mySentence));
+
+console.log(numberOfLetters(mySentence))
 
 
 
